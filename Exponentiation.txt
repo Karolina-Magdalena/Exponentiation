@@ -1,0 +1,49 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+unsigned long long int a,b;
+int c,d,y;
+
+int main()
+{
+    cin>>y;
+    for (int i=1; i<=y; i++)
+    {
+    cin>>a>>b;
+    if (b==0) cout<<1<<endl;
+    else
+    {
+    c=a%10;
+    d=b%4;
+    switch(d)
+    {
+    case 0:
+        {
+            cout<<(c*c*c*c)%10<<endl;
+        }
+    break;
+
+    case 1:
+        {
+            cout<<c<<endl;
+        }
+    break;
+
+    case 2:
+        {
+            cout<<(c*c)%10<<endl;
+        }
+    break;
+
+    case 3:
+        {
+            cout<<(c*c*c)%10<<endl;
+        }
+    break;
+    }
+    }
+    }
+    return 0;
+}
